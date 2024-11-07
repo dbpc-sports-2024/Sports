@@ -3,6 +3,10 @@
     font-family: 'Varsity'; /* Define the name of the font */
     src: url('/BaseballClubSolid-E4X69.ttf') format('opentype');
 }
+@font-face{
+    font-family: 'Radley';
+    src: url('/RadleySans-ZVYBK.ttf') format('opentype');
+}
 .wrapper {
     display: flex;
     flex-direction: column;
