@@ -388,3 +388,94 @@ body, p, .text-container, .table-container, .form-inline label, table th, table 
 .hidden {
     display: none;
 }
+
+/* Preloader full screen container */
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Logo rise animation */
+.preloader-logo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 100;
+  animation: rise 1.5s ease-out forwards;
+}
+
+/* Quadrant base styling */
+.quadrant {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform: scale(0);
+  opacity: 0;
+  animation: expand-quad 2s ease-out forwards;
+}
+
+/* Quadrant colors and positioning */
+.red {
+  background-color: #FF0000;
+  top: 0;
+  left: 0;
+  animation-delay: 1s;
+}
+
+.blue {
+  background-color: #0000FF;
+  top: 0;
+  right: 0;
+  animation-delay: 1.2s;
+}
+
+.green {
+  background-color: #00FF00;
+  bottom: 0;
+  left: 0;
+  animation-delay: 1.4s;
+}
+
+.yellow {
+  background-color: #FFFF00;
+  bottom: 0;
+  right: 0;
+  animation-delay: 1.6s;
+}
+
+/* Keyframes for logo rising */
+@keyframes rise {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Keyframes for expanding quadrants */
+@keyframes expand-quad {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1); /* Ensures each quadrant fills 25% of the screen */
+    opacity: 1;
+  }
+}
