@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        @font-face {
+            font-family: 'Varsity'; /* Define the name of the font */
+            src: url('VarsityTeam-Bold.otf') format('opentype');
+        }
+        h1{
+            color: white;
+            font-family: 'Varsity', sans-serif;
+            text-align: center;
+            font-weight: bold;
+            font-size: 5rem;
+        }
+        /* Wrapper for the iframe */
+        .form-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 140%; /* Aspect ratio 7:5 (height:width), adjust as needed */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px; /* Optional: Set a maximum width */
+            margin: 20px auto;
+        }
+
+        /* Make the iframe responsive */
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        body{
+            background-color: #3e3f40;
+        }
+    </style>
+</head>
+<body>
+    <h1>Participant Registration</h1>
+    <div class="form-container">
+        <!-- Embed Google Form iframe here -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWrq9z_Yw-2-yHDZ16nLcDW002KCo-_6d_GpVDiaKNzsiACA/viewform?embedded=true"></iframe>
+    </div>
+</body>
+</html>
