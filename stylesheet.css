@@ -1,4 +1,8 @@
 /* Wrapper for Center Alignment */
+@font-face {
+    font-family: 'Varsity'; /* Define the name of the font */
+    src: url('VarsityTeam-Bold.otf') format('opentype');
+}
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -9,11 +13,15 @@
 }
 h1{
     color: white;
+    font-family: 'Varsity', sans-serif;
+    font-weight: bold;
+    font-size: 5rem;
 }
 
 body {
-    background-color: #f4f4f9;
-    background-image: url('bg.jpg');
+    background-color: #1c1c22;
+    background-size: cover; /* Ensures the background image covers the entire body without tiling */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
@@ -31,8 +39,7 @@ header {
 }
 
 header h1 {
-    font-family: 'Algerian', sans-serif;
-    font-weight: bold;
+    font-family: 'Varsity', sans-serif;      font-weight: bold;
     color: white; /* Ensure heading text is white */
     letter-spacing: 2px;
     margin: 0; /* Remove default margin */
@@ -105,12 +112,13 @@ header p {
     margin: 0 10px;
     font-size: 40px;
     color: rgb(255, 255, 255);
+    background-color: rgb(235 231 231 / 35%); 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    border: 3px solid #0FFF50;
+    border: 3px solid #ffffff;
     text-align: center;
 }
 
@@ -235,7 +243,7 @@ table {
     width: 100%; /* Ensure the table takes the full width of the .table container */
 }
 table th, table td {
-    border: 1px solid #0aff27;
+    border: 1px solid #ffffff;
     padding: 12px;
     background-color: rgba(255, 255, 255, .2);
     align-self: center;
@@ -267,7 +275,7 @@ iframe {
     max-width: 480px; /* Reduced max-width */
     height: 270px; /* Reduced height */
     border-radius: 10px;
-    border: 3px solid #0FFF50;
+    border: 3px solid rgb(247 244 244 / 79%);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
     .text{
@@ -297,4 +305,80 @@ iframe {
 
 #eventForm button:hover {
     background-color: #00b36b;
+}
+
+/* Event Picker (Select Dropdown) */
+#event-selector {
+    font-family: 'Nunito', sans-serif;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    transition: all 0.3s ease-in-out;
+    margin: 20px 0;
+}
+
+#event-selector:hover,
+#event-selector:focus {
+    border-color: #4a59b3;
+    box-shadow: 0 0 5px rgba(74, 89, 179, 0.5);
+}
+
+body, p, .text-container, .table-container, .form-inline label, table th, table td {
+    font-family: 'Nunito', sans-serif;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* The loading bar */
+.loading-bar {
+    width: 80%; /* Adjust the width of the loading bar */
+    height: 10px; /* Height of the bar */
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* The animated inner part of the loading bar */
+.loading-bar .progress {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #4CAF50; /* Green color for the progress */
+    animation: loading 2s linear infinite;
+}
+
+/* Keyframe animation for the loading bar */
+@keyframes loading {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Hide content initially */
+.hidden {
+    display: none;
 }
