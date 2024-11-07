@@ -404,8 +404,8 @@ body, p, .text-container, .table-container, .form-inline label, table th, table 
 
 /* Logo rise animation */
 .preloader-logo {
-  width: 100px;
-  height: 100px;
+  width: 200px; /* Increase size from 100px */
+  height: 200px; /* Increase size from 100px */
   position: absolute;
   z-index: 100;
   animation: rise 1.5s ease-out forwards;
