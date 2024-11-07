@@ -37,15 +37,26 @@ header h1 {
     letter-spacing: 2px;
     margin: 0; /* Remove default margin */
 }
-.text-container {
+.text-container p{
     background-color: #72707087;
+    justify-content : ;
     padding: 10px;
     margin: 30px;
     border-radius: 5px;
     color: rgb(255, 255, 255);
 
-    text-align: center; /* Center-aligns text within the textbox */
+    text-align: justify; /* Center-aligns text within the textbox */
     font-weight: bold;
+}
+.text-container {
+    justify-content : ;
+    padding: 10px;
+    margin: 30px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center; /* Centers the heading within the container */
+    margin: 0; /* Optional: removes default margin for more control over spacing */
 }
 
 header p {
