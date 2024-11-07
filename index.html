@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Day</title>
+    <link rel="stylesheet" href="stylesheet.css"> <!-- Link to external CSS file -->
+</head>
+<style>
+    @import url('https://fonts.cdnfonts.com/css/the-bold-font');
+</style>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>SPORTS DAY</h1>
+        </div>
 
+        <!-- House Points Section -->
+        <div class="house-points">
+            <div class="strip-container">
+                <div class="strip red">
+                    <span id="redBox" class="points">0</span>
+                    <span class="house-name">Red House</span>
+                </div>
+                <div class="strip blue">
+                    <span id="blueBox" class="points">0</span>
+                    <span class="house-name">Blue House</span>
+                </div>
+                <div class="strip green">
+                    <span id="greenBox" class="points">0</span>
+                    <span class="house-name">Green House</span>
+                </div>
+                <div class="strip yellow">
+                    <span id="yellowBox" class="points">0</span>
+                    <span class="house-name">Yellow House</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="timer-container">
+            <div id="container_timer">
+                <div class="flip-card"><div class="top-flip">12</div></div>
+                <div class="flip-card"><div class="top-flip">34</div></div>
+                <div class="flip-card"><div class="top-flip">56</div></div>
+                <div class="flip-card"><div class="top-flip">08</div></div>
+            </div>
+        </div>
+
+        <!-- Event Video -->
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/E-Po06nG9Mo" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Event Results Section -->
+        <div class="content">
+            <h2>Check Results</h2>
+
+            <!-- Event Selector Dropdown -->
+            <label for="event-selector">Choose an event:</label>
+            <select id="event-selector">
+                <option value="">Select an event</option>
+                <option value="100 Meters (Class - 3)">100 Meters (Class - 3)</option>
+                <option value="100 Meters (Class - 4)">100 Meters (Class - 4)</option>
+                <option value="100 Meters (Class - 5)">100 Meters (Class - 5)</option>
+                <option value="Get Ready for School (Class - 3)">Get Ready for School (Class - 3)</option>
+                <option value="Spoon & Marble Race (Class - 4)">Spoon & Marble Race (Class - 4)</option>
+                <option value="Sack Race (Class - 5)">Sack Race (Class - 5)</option>
+                <option value="Plucking the Tail (Class - 3)">Plucking the Tail (Class - 3)</option>
+                <option value="Obstacle Race (Class - 4)">Obstacle Race (Class - 4)</option>
+                <option value="Obstacle Race (Class - 5)">Obstacle Race (Class - 5)</option>
+                <option value="200 Meters (Class - 4)">200 Meters (Class - 4)</option>
+                <option value="400 Meters (Class - 5)">400 Meters (Class - 5)</option>
+                <option value="Tunnel Ball (Class - 3/4/5)">Tunnel Ball (Class - 3/4/5)</option>
+                <option value="Tug-of-War (Class - 5)">Tug-of-War (Class - 5)</option>
+            </select>
+
+            <!-- Error Message Display -->
+            <p id="error-message" class="error-message" style="display: none;">Error fetching data or no data available.</p>
+
+            <!-- Results Table -->
+            <div class="table-container">
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>House</th>
+                            <th>Name</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
