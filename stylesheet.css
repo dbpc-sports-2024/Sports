@@ -177,7 +177,7 @@ header p {
 
 .strip .house-name {
     flex: 1;
-    font-family: 'Radley';
+    font-family: 'Radley', sans-serif;
     font-weight: bold;
     font-size: 22px;
     text-align: center;
