@@ -7,70 +7,65 @@
     text-align: center;
     margin-top: 20px; /* Adjust as needed */
 }
-h1{
-    color: white;
-}
 
+/* General Styling */
 body {
     background-color: #f4f4f9;
     background-image: url('bg.jpg');
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    min-height: 100vh; /* Ensure body takes full height */
-    margin: 0; /* Remove default margin */
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: white; /* Default text color */
 }
 
 /* Header Styles */
 header {
     background: linear-gradient(45deg, #4a59b3, #1c1c47);
-    color: white; /* This sets the default text color for the header */
+    color: white;
     padding: 2rem;
     text-align: center;
-    width: 100%; /* Ensure header takes full width */
+    width: 100%;
 }
 
 header h1 {
     font-family: 'Algerian', sans-serif;
     font-weight: bold;
-    color: white; /* Ensure heading text is white */
     letter-spacing: 2px;
-    margin: 0; /* Remove default margin */
-}
-.text-container {
-    background-color: #72707087;
-    padding: 10px;
-    margin: 30px;
-    border-radius: 5px;
-    color: rgb(255, 255, 255);
-
-    text-align: center; /* Center-aligns text within the textbox */
-    font-weight: bold;
+    margin: 0;
 }
 
 header p {
     font-size: 1.1rem;
     max-width: 800px;
-    color: white; /* Ensure paragraph text is white */
-    margin: 0 auto; /* Center paragraph */
+    margin: 0 auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        font-size: 1.5rem;
     }
-
     header p {
-        font-size: 1rem; /* Adjust paragraph size for smaller screens */
+        font-size: 1rem;
     }
+}
+
+/* Text Container */
+.text-container {
+    background-color: #72707087;
+    padding: 10px;
+    margin: 30px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* House Points */
 .house-points .house-point {
     font-size: 1.2rem;
     padding: 10px 20px;
-    color: white;
     font-weight: bold;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -93,7 +88,7 @@ header p {
     height: 100px;
     margin: 0 10px;
     font-size: 40px;
-    color: rgb(255, 255, 255);
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,7 +104,6 @@ header p {
 .green { background-color: rgb(16, 75, 16); }
 .yellow { background-color: rgb(139, 139, 9); }
 
-/* Container for House Strips */
 /* House Strips */
 .strip-container {
     display: flex;
@@ -131,34 +125,21 @@ header p {
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
-    color: white;
     border-radius: 8px;
     position: relative;
     overflow: hidden;
 }
-
-.red { background-color: red; }
-.blue { background-color: rgb(32, 32, 190); }
-.green { background-color: rgb(16, 75, 16); }
-.yellow { background-color: rgb(139, 139, 9); }
-
-/* Adjusting alignment of house-name and points */
-.strip .house-name {
-    flex: 1;
-    text-align: center;
-}
-
-.strip .points {
-    font-size: 22px;
-    margin-left: 10px;
-}
-
 
 .strip .house-name {
     flex: 1;
     font-weight: bold;
     font-size: 22px;
     text-align: center;
+}
+
+.strip .points {
+    font-size: 22px;
+    margin-left: 10px;
 }
 
 /* Shine effect */
@@ -174,11 +155,6 @@ header p {
     animation: shine 5s linear infinite;
 }
 
-@keyframes shine {
-    0% { left: -100%; }
-    100% { left: 100%; }
-}
-
 .strip:hover::before {
     left: 100%;
     transition: 0.5s;
@@ -191,7 +167,8 @@ header p {
     align-items: center;
 }
 
-.form-inline label {width: 30px;
+.form-inline label {
+    width: 30px;
     font-weight: bold;
 }
 
@@ -212,36 +189,26 @@ header p {
     border-collapse: collapse;
     font-size: 18px;
     text-align: right;
-    background-color: #ffffff; /* Dark neon green */
+    background-color: #ffffff;
     color: rgb(247, 247, 247);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    overflow: hidden; 
+    overflow: hidden;
     border: 2px solid #ffffff;
-    align-self: center;
 }
-table {
-    width: 100%; /* Ensure the table takes the full width of the .table container */
-}
+
 table th, table td {
     border: 1px solid #0aff27;
     padding: 12px;
     background-color: rgba(255, 255, 255, .2);
-    align-self: center;
     color: white;
-
 }
 
 table th {
     background-color: rgba(0, 0, 0, 0.2);
-    color: rgb(245, 243, 243);
-
 }
 
-table tr:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.5); 
-}
-
+table tr:nth-child(even),
 table tr:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -252,32 +219,30 @@ table tr:hover {
 }
 
 iframe {
-    width: 80%; /* Adjusted width to 80% of its container */
-    max-width: 480px; /* Reduced max-width */
-    height: 270px; /* Reduced height */
+    width: 80%;
+    max-width: 480px;
+    height: 270px;
     border-radius: 10px;
     border: 3px solid #0FFF50;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-    .text{
-    color:#ffffff
-}
-/* Form Title and Label Styling */
+
+/* Event Form */
 #eventForm h2, 
 #eventForm label {
-    color: #ffffff; /* Set color to white */
+    color: white;
 }
 
-#eventForm select, #eventForm button {
-    color: #ffffff; /* Set the color of text inside select boxes and button to white */
-    background-color: #1a1a1d; /* Optional: Darken background to make white text pop */
-    border: 1px solid #0FFF50; /* Optional: Border color to match theme */
+#eventForm select, 
+#eventForm button {
+    color: white;
+    background-color: #1a1a1d;
+    border: 1px solid #0FFF50;
 }
 
 #eventForm button {
     background-color: #0FFF50;
-    color: #000000; /* Text color on button */
-    border: none;
+    color: black;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
