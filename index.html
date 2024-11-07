@@ -115,5 +115,14 @@
 
     <!-- Link to the external JavaScript file -->
     <script type="module" src="script.js"></script>
+    <script>
+      // Wait for 2 seconds before hiding the preloader
+      window.onload = function() {
+        setTimeout(function() {
+          // Hide the preloader after 2 seconds
+          document.getElementById('preloader').style.display = 'none';
+        }, 4000); // 2000 milliseconds = 2 seconds
+      };
+    </script>
 </body>
 </html>
